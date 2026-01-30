@@ -1,0 +1,13 @@
+# Runtime & environment
+runtime/
+.venv/
+__pycache__/
+
+# Data files
+*.xlsx
+*.xls
+*.csv
+*.parquet
+
+# Logs
+*.log

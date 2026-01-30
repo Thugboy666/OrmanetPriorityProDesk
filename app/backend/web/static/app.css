@@ -1,0 +1,128 @@
+:root {
+  --orange: #f26b21;
+  --black: #111111;
+  --white: #ffffff;
+  --gray: #f4f4f4;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: var(--gray);
+  color: var(--black);
+}
+
+.app-header {
+  background: var(--black);
+  color: var(--white);
+  padding: 2rem;
+}
+
+.app-header h1 {
+  margin: 0 0 0.5rem;
+}
+
+.app-shell {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.tabs {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.tab {
+  background: transparent;
+  border: 2px solid var(--black);
+  color: var(--black);
+  padding: 0.6rem 1.5rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.tab.active {
+  background: var(--orange);
+  color: var(--white);
+  border-color: var(--orange);
+}
+
+.tab-panel {
+  display: none;
+}
+
+.tab-panel.active {
+  display: block;
+}
+
+.card {
+  background: var(--white);
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.import-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.import-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  border: 1px solid #e0e0e0;
+  padding: 1rem;
+  border-radius: 6px;
+}
+
+.import-item button {
+  background: var(--orange);
+  border: none;
+  color: var(--white);
+  padding: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.status {
+  font-size: 0.85rem;
+  color: #555;
+}
+
+.results {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+.results li {
+  padding: 0.6rem 0.8rem;
+  border-bottom: 1px solid #e6e6e6;
+  cursor: pointer;
+}
+
+.results li:hover {
+  background: var(--gray);
+}
+
+.detail {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.detail .pill {
+  background: var(--black);
+  color: var(--white);
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+}
