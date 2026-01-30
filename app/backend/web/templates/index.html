@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ormanet Priority Pro Desk</title>
+    <link rel="stylesheet" href="/static/app.css" />
+  </head>
+  <body>
+    <header class="app-header">
+      <h1>Ormanet Priority Pro Desk</h1>
+      <p>Console operativa per importazione e consultazione clienti.</p>
+    </header>
+
+    <main class="app-shell">
+      <nav class="tabs">
+        <button class="tab active" data-tab="import">Import</button>
+        <button class="tab" data-tab="clienti">Clienti</button>
+        <button class="tab" data-tab="dettaglio">Dettaglio Cliente</button>
+      </nav>
+
+      <section id="tab-import" class="tab-panel active">
+        <div class="card">
+          <h2>Importa file</h2>
+          <div class="import-grid">
+            <div class="import-item">
+              <label for="upload-clienti">Clienti (.xlsx)</label>
+              <input id="upload-clienti" type="file" accept=".xlsx" />
+              <button data-import="clienti">Importa</button>
+              <span class="status" data-status="clienti"></span>
+            </div>
+            <div class="import-item">
+              <label for="upload-minord">Minimi Ordine (.xlsx)</label>
+              <input id="upload-minord" type="file" accept=".xlsx" />
+              <button data-import="minord">Importa</button>
+              <span class="status" data-status="minord"></span>
+            </div>
+            <div class="import-item">
+              <label for="upload-ordini">Ordini (.xlsx)</label>
+              <input id="upload-ordini" type="file" accept=".xlsx" />
+              <button data-import="ordini">Importa</button>
+              <span class="status" data-status="ordini"></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="tab-clienti" class="tab-panel">
+        <div class="card">
+          <h2>Clienti</h2>
+          <input id="search-clienti" type="text" placeholder="Cerca per ragione sociale" />
+          <ul id="clienti-results" class="results"></ul>
+        </div>
+      </section>
+
+      <section id="tab-dettaglio" class="tab-panel">
+        <div class="card">
+          <h2>Dettaglio Cliente</h2>
+          <div id="cliente-dettaglio" class="detail">
+            <p>Seleziona un cliente per visualizzare i dettagli.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="/static/app.js"></script>
+  </body>
+</html>
