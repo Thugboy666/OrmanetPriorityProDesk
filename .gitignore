@@ -1,13 +1,18 @@
-# Runtime & environment
+# Runtime portable (mai su git)
 runtime/
-.venv/
-__pycache__/
+**/runtime/
 
-# Data files
-*.xlsx
-*.xls
-*.csv
-*.parquet
+# Cache / logs
+**/__pycache__/
+**/*.pyc
+**/*.log
 
-# Logs
-*.log
+# Dati reali (mai su repo)
+app/data/imports/
+app/data/exports/
+app/data/*.xlsx
+app/data/*.xls
+app/data/*.csv
+
+# Env
+.env
